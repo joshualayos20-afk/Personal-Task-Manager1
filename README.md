@@ -1,11 +1,11 @@
 Personal Task Manager
 
+
 Project Code: WST21-PM-2026-SF
 Student: Joshua Layos
 Course: BSIT - 2nd Year
 Database: MySQL
 Environment: XAMPP
-
 
 
 Description
