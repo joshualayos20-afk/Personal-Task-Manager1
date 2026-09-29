@@ -323,7 +323,7 @@ updated_at
 
 ### Completed Task
 
-!Completed Task](screenshots/completed-task'.jpeg)
+![Completed Task](screenshots/completed-task'.jpeg)
 
 ### Delete Task
 
