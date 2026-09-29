@@ -307,27 +307,27 @@ updated_at
 
 ### Dashboard
 
-[Dashboard](screenshots/dashboard.jpeg)
+![Dashboard](screenshots/dashboard.jpeg)
 
 ### Add New Task
 
-[Add New Task](screenshots/add-task.jpeg)
+![Add New Task](screenshots/add-task.jpeg)
 
 ### Task List
 
-[Task List](screenshots/task-list.jpeg)
+![Task List](screenshots/task-list.jpeg)
 
 ### Edit Task
 
-[Edit Task](screenshots/edit-task.jpeg)
+![Edit Task](screenshots/edit-task.jpeg)
 
 ### Completed Task
 
-[Completed Task](screenshots/completed-task'.jpeg)
+!Completed Task](screenshots/completed-task'.jpeg)
 
 ### Delete Task
 
-[Delete Task](screenshots/delete-task.png)
+![Delete Task](screenshots/delete-task.png)
 
 ## System Outputs
 
