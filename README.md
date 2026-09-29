@@ -327,7 +327,7 @@ updated_at
 
 ### Delete Task
 
-![Delete Task](screenshots/delete-task.png)
+![Delete Task](screenshots/delete-task.jpeg)
 
 ## System Outputs
 
