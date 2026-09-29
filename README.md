@@ -82,7 +82,7 @@ System Screenshots
 ![Edit Task](screenshots/edit-task.jpeg)
 
 ### Completed Task
-![Completed Task](screenshots/completed-task.jpeg)
+![Completed Task](screenshots/completed-task'.jpeg)
 
 ### Delete Task
 ![Delete Task](screenshots/delete-task.jpeg)
