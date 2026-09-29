@@ -1,18 +1,18 @@
-Personal Task Manager
+# Personal Task Manager
 
-Student Information
+## Student Information
 
-- Project Code: WST21-PM-2026-SF
-- Student Name: Joshua Layos
-- Course & Year: BSIT - 2nd Year
-- Database Used: MySQL
-- Local Environment: XAMPP
+- **Project Code:** WST21-PM-2026-SF
+- **Student Name:** Joshua Layos
+- **Course & Year:** BSIT - 2nd Year
+- **Database Used:** MySQL
+- **Local Environment:** XAMPP
 
-Project Description
+## Project Description
 
 Personal Task Manager is a simple Laravel project made to help manage tasks. It allows the user to add tasks, view tasks, edit them, change their status, and delete them.
 
-Features
+## Features
 
 - Add Task
 - View Task
@@ -23,7 +23,7 @@ Features
 - Add Due Date
 - Dashboard Counters
 
-Technologies Used
+## Technologies Used
 
 - Laravel
 - PHP
@@ -33,34 +33,35 @@ Technologies Used
 - CSS
 - XAMPP
 
-How the System Works
+## How the System Works
 
-1. Open the System
+### 1. Open the System
 
 When the system is opened, the dashboard shows the task list and the task counters.
 
-2. Add a Task
+### 2. Add a Task
 
-The user clicks Add New Task and enters the task name, description, status, and due date. After clicking the submit button, the task is saved in the database.
+The user clicks **Add New Task** and enters the task name, description, status, and due date. After clicking the submit button, the task is saved in the database.
 
-3. View Tasks
+### 3. View Tasks
 
 The added task will appear in the task list. The dashboard also shows the number of total, pending, and completed tasks.
 
-4. Edit a Task
+### 4. Edit a Task
 
-The user can click Edit to change the information of a task. After saving, the changes will appear in the task list.
+The user can click **Edit** to change the information of a task. After saving, the changes will appear in the task list.
 
-5. Change Status
+### 5. Change Status
 
-The user can change the task status from Pending to Completed.
+The user can change the task status from **Pending** to **Completed**.
 
-6. Delete a Task
+### 6. Delete a Task
 
-The user can click Delete to remove a task from the list.
+The user can click **Delete** to remove a task from the list.
 
-Laravel Flow
+## Laravel Flow
 
+```text
 User
  ↓
 Blade
@@ -76,34 +77,38 @@ MySQL
 Blade
  ↓
 User
+```
 
-Laravel Code
+## Laravel Code
 
-1. Routes
+### 1. Routes
 
-File:
+**File:**
 
-routes/web.php
+`routes/web.php`
 
-Code:
+**Code:**
 
+```php
 <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 
 Route::resource('tasks', TaskController::class);
+```
 
-The route connects the website pages to the TaskController.
+The route connects the website pages to the `TaskController`.
 
-2. Task Model
+### 2. Task Model
 
-File:
+**File:**
 
-app/Models/Task.php
+`app/Models/Task.php`
 
-Code:
+**Code:**
 
+```php
 <?php
 
 namespace App\Models;
@@ -119,17 +124,19 @@ class Task extends Model
         'due_date',
     ];
 }
+```
 
 The model is used to work with the task data in MySQL.
 
-3. Task Controller
+### 3. Task Controller
 
-File:
+**File:**
 
-app/Http/Controllers/TaskController.php
+`app/Http/Controllers/TaskController.php`
 
-Code:
+**Code:**
 
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -215,17 +222,19 @@ class TaskController
             ->with('success', 'Task deleted successfully.');
     }
 }
+```
 
 The controller handles the main actions of the system like adding, viewing, editing, updating, and deleting tasks.
 
-4. Database Migration
+### 4. Database Migration
 
-File:
+**File:**
 
-database/migrations/create_tasks_table.php
+`database/migrations/create_tasks_table.php`
 
-Code:
+**Code:**
 
+```php
 Schema::create('tasks', function (Blueprint $table) {
     $table->id();
     $table->string('task_name');
@@ -235,47 +244,56 @@ Schema::create('tasks', function (Blueprint $table) {
     $table->date('due_date');
     $table->timestamps();
 });
+```
 
-This code creates the "tasks" table in MySQL.
+This code creates the `tasks` table in MySQL.
 
-5. Blade View
+### 5. Blade View
 
-Main file:
+**Main file:**
 
-resources/views/tasks/index.blade.php
+`resources/views/tasks/index.blade.php`
 
-Example:
+**Example:**
 
+```blade
 @foreach($tasks as $task)
     {{ $task->task_name }}
 @endforeach
+```
 
 Blade is used to show the task information on the website.
 
-CRUD
+## CRUD
 
 The project uses CRUD:
 
-CRUD| What it does
-Create| Add a task
-Read| View tasks
-Update| Edit a task
-Delete| Delete a task
+| CRUD | What it does |
+|---|---|
+| Create | Add a task |
+| Read | View tasks |
+| Update | Edit a task |
+| Delete | Delete a task |
 
-Database
+## Database
 
-The database used for this project is MySQL.
+The database used for this project is **MySQL**.
 
-Database name:
+**Database name:**
 
+```text
 task_manager
+```
 
-Table:
+**Table:**
 
+```text
 tasks
+```
 
 The table contains:
 
+```text
 id
 task_name
 description
@@ -283,61 +301,63 @@ status
 due_date
 created_at
 updated_at
+```
 
-System Screenshots
+## System Screenshots
 
-Dashboard
+### Dashboard
 
-"Dashboard" (screenshots/dashboard.png)
+[Dashboard](screenshots/dashboard.png)
 
-Add New Task
+### Add New Task
 
-"Add New Task" (screenshots/add-task.png)
+[Add New Task](screenshots/add-task.png)
 
-Task List
+### Task List
 
-"Task List" (screenshots/task-list.png)
+[Task List](screenshots/task-list.png)
 
-Edit Task
+### Edit Task
 
-"Edit Task" (screenshots/edit-task.png)
+[Edit Task](screenshots/edit-task.png)
 
-Completed Task
+### Completed Task
 
-"Completed Task" (screenshots/completed-task.png)
+[Completed Task](screenshots/completed-task.png)
 
-Delete Task
+### Delete Task
 
-"Delete Task" (screenshots/delete-task.png)
+[Delete Task](screenshots/delete-task.png)
 
-System Outputs
+## System Outputs
 
-Add Task
+### Add Task
 
 The task is added and shown in the task list.
 
-View Task
+### View Task
 
 The saved task is displayed in the task list with its description, status, and due date.
 
-Edit Task
+### Edit Task
 
 The task information is updated after editing.
 
-Completed Task
+### Completed Task
 
-The task status changes from Pending to Completed.
+The task status changes from **Pending** to **Completed**.
 
-Delete Task
+### Delete Task
 
 The selected task is removed from the task list.
 
-Dashboard
+### Dashboard
 
 The dashboard shows the total, pending, and completed tasks.
 
-Project Structure
+## Project Structure
 
+```text
 Personal-Task-Manager-Laravel/
 │
 ├── app/
@@ -365,37 +385,43 @@ Personal-Task-Manager-Laravel/
 ├── composer.json
 ├── Dockerfile
 └── README.md
+```
 
-How to Run the Project
+## How to Run the Project
 
-Step 1: Start MySQL
+### Step 1: Start MySQL
 
-Make sure the MySQL267 service is running.
+Make sure the **MySQL267** service is running.
 
-Step 2: Open Command Prompt
+### Step 2: Open Command Prompt
 
 Go to the project folder:
 
+```cmd
 cd /d "C:\Users\kings\OneDrive\Desktop\Joshua-Layos-Personal-Task-Manager"
+```
 
-Step 3: Start Laravel
+### Step 3: Start Laravel
 
 Run:
 
+```cmd
 set PATH=C:\xampp\php;%PATH% && php artisan serve
+```
 
-Step 4: Open the Website
+### Step 4: Open the Website
 
 Open the browser and go to:
 
-http://127.0.0.1:8000/tasks
+[http://127.0.0.1:8000/tasks](http://127.0.0.1:8000/tasks)
 
-Step 5: Use the System
+### Step 5: Use the System
 
 After opening the website, the user can add, view, edit, change the status, and delete tasks.
 
-Laravel Flow
+## Laravel Flow
 
+```text
 Routes
    ↓
 Controller
@@ -405,15 +431,16 @@ Model
 MySQL Database
    ↓
 Blade
+```
 
-- Routes connect the pages to the controller.
-- Controller handles the actions of the system.
-- Model works with the task data.
-- MySQL stores the task information.
-- Blade displays the information on the website.
+- **Routes** connect the pages to the controller.
+- **Controller** handles the actions of the system.
+- **Model** works with the task data.
+- **MySQL** stores the task information.
+- **Blade** displays the information on the website.
 
-Notes
+## Notes
 
-The "vendor" folder and ".env" file are not included in the repository.
+The `vendor` folder and `.env` file are not included in the repository.
 
-The "vendor" folder is generated by Composer, while ".env" contains the local database and application settings.
+The `vendor` folder is generated by Composer, while `.env` contains the local database and application settings.
